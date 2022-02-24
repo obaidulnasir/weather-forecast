@@ -11,11 +11,16 @@ function App() {
      <br />
        <BrowserRouter>
        <Switch>
-         <Route exact path="/">
-            <Home></Home>
-         </Route>
+        
+         {/* <Route path="/daily">
+            <Daily></Daily>
+         </Route> */}
          <Route path="/home">
            <Home></Home>
+         </Route>
+
+         <Route exact path="/">
+            <Home></Home>
          </Route>
        </Switch>
        </BrowserRouter>

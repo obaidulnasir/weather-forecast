@@ -2,13 +2,21 @@ import { useEffect, useState } from "react";
 
 
 const useWeather = () => {
-    const [cityWeather, setCityWeather] = useState({});
+    const [cityWeather, setCityWeather] = useState([]);
+    const [forecast, setForecast] = useState([]);
 
    useEffect(()=>{
        fetch("./forecast.json")
        .then(res=> res.json())
        .then(data => setCityWeather(data))
        console.log(cityWeather);
+   },[]);
+
+   useEffect(()=>{
+       fetch("./onecall.json")
+       .then(res => res.json())
+       .then(data => setForecast(data));
+       console.log(forecast);
    },[])
 
 
@@ -24,6 +32,7 @@ const useWeather = () => {
 
     return {
         cityWeather,
+        forecast
     }
 }
 

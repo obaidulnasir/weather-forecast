@@ -6,7 +6,7 @@ const HourlyCard = () => {
     const { list } = cityWeather;
     const sliceList = list?.slice(0, 6);
 
-    console.log(list);
+    // console.log(forecast);
     return (
         <div className='w-4/5 mx-auto'>
             <div className='my-3'>
