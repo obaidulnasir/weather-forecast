@@ -5,8 +5,8 @@ import Modal from '../../Modal/Modal';
 const Daily = () => {
     const { forecast } = useW();
     const forecastDaily = forecast.daily;
-    console.log(forecast)
-    console.log(forecast.daily);
+    // console.log(forecast)
+    // console.log(forecast.daily);
 
     // function createDate(dt, type) {
     //     var day = new Date(dt * 1000);
@@ -47,7 +47,7 @@ const Daily = () => {
 
     // console.log(day.toUTCString()) // 'Fri, 15 Jan 2021 04:32:29 GMT'
     // console.log(day.toDateString()) // 'Fri Jan 15 2021'
-    // console.log(day.toISOString()) // '2021-01-15T04:32:29.000Z'
+    // day.toISOString()) // '2021-01-15T04:32:29.000Z'
     // console.log(day.toString()) // 'Fri Jan 15 2021 07:32:29 GMT+0300 (GMT+03:00)'
 
     //this Time for HOurly data

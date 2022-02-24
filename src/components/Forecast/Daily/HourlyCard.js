@@ -14,9 +14,6 @@ const HourlyCard = () => {
         return day.getHours();
     };
 
-    
-   
-
     // console.log(forecast);
     return (
         <div className='w-4/5 mx-auto'>

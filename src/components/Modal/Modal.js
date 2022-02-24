@@ -4,7 +4,7 @@ const Modal = (props) => {
     // const {dt} = props.it;
     // const {dt}= props.dailyData;
     // console.log(dt);
-    console.log(props.it?.clouds)
+    // console.log(props.it?.clouds)
      const [modal, setModal] = useState("hidden");
    
     const openModal= ()=>{
