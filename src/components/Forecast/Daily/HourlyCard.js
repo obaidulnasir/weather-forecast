@@ -2,8 +2,8 @@ import React from 'react';
 import useW from '../../../hooks/useW';
 
 const HourlyCard = () => {
-    const { cityWeather, forecast } = useW();
-    const { list } = cityWeather;
+    const { forecast } = useW();
+    // const { list } = cityWeather;
     const {hourly} = forecast;
     const sliceList = hourly?.slice(0, 12);
 

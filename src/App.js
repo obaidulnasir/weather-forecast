@@ -6,7 +6,7 @@ import WeatherProvider from './components/WeatherProvider/WeatherProvider';
 
 function App() {
   return (
-    <div className="bg-sky-900 h-screen">
+    <div className="bg-sky-900">
      <WeatherProvider>
      <br />
        <BrowserRouter>
