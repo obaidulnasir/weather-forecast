@@ -22,7 +22,7 @@ const HourlyCard = () => {
             </div>
             <div className='grid grid-cols-6 gap-4'>
                 {sliceList?.map((it) => (
-                    <div className='px-2 py-2 rounded-xl shadow-lg shadow-yellow-400 '>
+                    <div key={it?.dt} className='px-2 py-2 rounded-xl border'>
                         <div>
                             <img src={`http://openweathermap.org/img/wn/${it?.weather[0]?.icon}@2x.png`} alt="" />
                         </div>
@@ -37,8 +37,8 @@ const HourlyCard = () => {
                                 </svg><span></span>
                             </div>
                             <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                 </svg><span>{it?.main?.temp_min}</span>
                             </div>
                         </div>

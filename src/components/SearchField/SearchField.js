@@ -20,9 +20,9 @@ const SearchField = () => {
                     <input className='bg-green-400 py-2 px-4' type="submit" value="Search" />
                 </form> */}
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input type="search" placeholder="city search" {...register("city", {})} />
+                    <input className='py-2' type="text" placeholder="Enter Your CityName" {...register("city", {})} />
 
-                    <input type="submit" />
+                    <input className='bg-green-400 py-2 px-4' type="submit" value="Search" />
                 </form>
             </div>
         </div>

@@ -60,9 +60,9 @@ const Daily = () => {
             <div className='my-3'>
                 <h4 className='font-bold text-green-500 text-3xl text-center'>Next 7 Days Expected Weather</h4>
             </div>
-            <div className='grid grid-cols-6 gap-4'>
+            <div className='md:grid md:grid-cols-4 lg:grid-cols-6 gap-4'>
                 {forecastDaily?.map((it) => (
-                    <div key={it.dt} className='px-2 py-2 rounded-xl shadow-lg shadow-yellow-400 '>
+                    <div key={it.dt} className='px-2 py-2 rounded-xl border'>
                         <div>
                             <img src={`http://openweathermap.org/img/wn/${it?.weather[0]?.icon}@2x.png`} alt="" />
                         </div>
@@ -81,7 +81,7 @@ const Daily = () => {
                             </div>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    <path fillRule="evenodd" d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                 </svg><span>{it?.temp?.min}</span>
                             </div>
                         </div>

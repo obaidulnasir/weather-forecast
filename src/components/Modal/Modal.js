@@ -32,26 +32,26 @@ const Modal = (props) => {
 
 
     return (
-        <div>
-            <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onClick={()=>openModal()}>Open modal</button>
+        <div >
+            <button onClick={()=>openModal()} className="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" >Open modal</button>
 
-            <div id="modal" class={`${modal} fixed z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4`}>
-                <div class="relative top-40 mx-auto shadow-lg rounded-md bg-white max-w-md">
+            <div id="modal" className={`${modal} fixed z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4`}>
+                <div className="relative top-40 mx-auto shadow-lg rounded-md bg-white max-w-md">
 
                     {/* <!-- Modal header --> */}
-                    <div class="flex justify-between items-center bg-green-600 text-white text-xl rounded-t-md px-4 py-2">
+                    <div className="flex justify-between items-center bg-green-600 text-white text-xl rounded-t-md px-4 py-2">
                         <h3>{createDate(props?.it?.dt)}</h3>
                         <button onClick={()=>closeModal()}>x</button>
                     </div>
 
                     {/* <!-- Modal body --> */}
-                    <div class="max-h-48 overflow-y-scroll p-4">
+                    <div className="max-h-48 overflow-y-scroll p-4">
                        {props.it.temp.max}
                     </div>
 
 
-                    <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onClick={()=>closeModal()}>Close</button>
+                    <div className="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onClick={()=>closeModal()}>Close</button>
                     </div>
                 </div>
             </div>

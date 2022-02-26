@@ -6,25 +6,26 @@ import WeatherProvider from './components/WeatherProvider/WeatherProvider';
 
 function App() {
   return (
-    <div className="bg-sky-900">
-     <WeatherProvider>
-     <br />
-       <BrowserRouter>
-       <Switch>
-        
-         {/* <Route path="/daily">
+    // className="bg-sky-900"
+    <div >
+      <WeatherProvider>
+        <br />
+        <BrowserRouter>
+          <Switch>
+
+            {/* <Route path="/daily">
             <Daily></Daily>
          </Route> */}
-         <Route path="/home">
-           <Home></Home>
-         </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
 
-         <Route exact path="/">
-            <Home></Home>
-         </Route>
-       </Switch>
-       </BrowserRouter>
-     </WeatherProvider>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      </WeatherProvider>
     </div>
   );
 }

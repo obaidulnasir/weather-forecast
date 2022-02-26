@@ -13,7 +13,7 @@ const useWeather = () => {
     useEffect(()=>{
         fetch("./current.json")
         .then(res=> res.json())
-        .then(data => setCityWeather(data))
+        .then(data => setCityWeather(data));
         // console.log(cityWeather?.list[0]?.coord?.lat);
     },[]);
  
