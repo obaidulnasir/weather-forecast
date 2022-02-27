@@ -5,7 +5,7 @@ const BasicWeather = () => {
     const { cityWeather } = useW();
 
 
-    console.log(cityWeather);
+    // console.log(cityWeather);
     // weatherCity("dhaka");
 
 
@@ -18,7 +18,7 @@ const BasicWeather = () => {
             <div className='w-4/5 mx-auto my-8 border shadow-lg p-3 rounded-lg'>
                 <div className='text-center'>
                     <p className='text-4xl font-bold'>{cityWeather?.list[0]?.name}, {cityWeather?.list[0]?.sys?.country}</p>
-                    <p className='text-8xl my-4 font-thin'>
+                    <p className='text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-yellow-500 text-8xl my-4 font-thin'>
                         {cityWeather?.list[0]?.main?.temp}&#8451;
                     </p>
                     <p className='tex-lg'>

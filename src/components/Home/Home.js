@@ -5,7 +5,7 @@ import Forecast from '../Forecast/Forecast';
 const Home = () => {
     return (
         <div>
-            <BasicWeather></BasicWeather>
+            {/* <BasicWeather></BasicWeather> */}
             <Forecast></Forecast>
         </div>
     );
