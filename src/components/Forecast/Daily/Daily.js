@@ -6,7 +6,7 @@ const Daily = () => {
     const { forecast } = useW();
     const forecastDaily = forecast.daily;
     // console.log(forecast)
-    // console.log(forecast.daily);
+    console.log(forecast.daily);
 
     // function createDate(dt, type) {
     //     var day = new Date(dt * 1000);
@@ -39,11 +39,11 @@ const Daily = () => {
         return day.toLocaleString("en-us", { weekday: "long" }); // Friday
     };
 
-    console.log(createDate(1645598754))
+    // console.log(createDate(1645598754))
 
-    const dti = 1645610400;
+    // const dti = 1645610400;
 
-    var day = new Date(dti * 1000);
+    // var day = new Date(dti * 1000);
 
     // console.log(day.toUTCString()) // 'Fri, 15 Jan 2021 04:32:29 GMT'
     // console.log(day.toDateString()) // 'Fri Jan 15 2021'
@@ -51,7 +51,7 @@ const Daily = () => {
     // console.log(day.toString()) // 'Fri Jan 15 2021 07:32:29 GMT+0300 (GMT+03:00)'
 
     //this Time for HOurly data
-    console.log(day.getHours(), ":", day.getMinutes()) // 13:00
+    // console.log(day.getHours(), ":", day.getMinutes()) // 13:00
 
 
 
