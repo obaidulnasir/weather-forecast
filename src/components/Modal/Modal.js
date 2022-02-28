@@ -1,6 +1,6 @@
 import moment from 'moment';
 import React, { useState } from 'react';
-import { mockComponent } from 'react-dom/test-utils';
+// import { mockComponent } from 'react-dom/test-utils';
 
 const Modal = (props) => {
     // const {dt} = props.it;
@@ -32,23 +32,16 @@ const Modal = (props) => {
         };
     };
 
-    // const createTime = (dt) => {
-    //     const day = new Date(dt * 1000);
-    //     // return day.getHours();
-    //     return (day.getHours(), ":", day.getMinutes()) // 13:00
-    // };
-// createTime(props.dt)
-
 
     return (
         <div >
-            <button onClick={() => openModal()} className="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" >Open modal</button>
+            <button onClick={() => openModal()} className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-md px-4 py-2 hover:from-pink-500 hover:to-yellow-500 transition" >See More</button>
 
             <div id="modal" className={`${modal} fixed z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4`}>
                 <div className="relative top-40 mx-auto shadow-lg rounded-md bg-white max-w-md">
 
                     {/* <!-- Modal header --> */}
-                    <div className="flex justify-between items-center bg-green-600 text-white text-xl rounded-t-md px-4 py-2">
+                    <div className="flex justify-between items-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xl rounded-t-md px-4 py-2">
                         <h3>{createDate(props?.it?.dt, "long")}</h3>
                         <button onClick={() => closeModal()}>x</button>
                     </div>
@@ -77,7 +70,10 @@ const Modal = (props) => {
                                     <p>Humidity { }</p>
                                 </div>
                                 <div>
-                                    <p>Sunrise: {moment(props?.it?.sunrise).format('LT')}</p>
+                                    <p>Sunrise: {moment.unix(props?.it?.sunrise).format('LT')}</p>
+                                </div>
+                                <div>
+                                    <p>Sunset: {moment.unix(props?.it?.sunset).format('LT')}</p>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +81,7 @@ const Modal = (props) => {
                     </div>
 
                     <div className="px-4 py-2 border-t border-t-yellow-500 flex justify-end items-center space-x-4">
-                        <button className="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-green-700 transition" onClick={() => closeModal()}>Close</button>
+                        <button className="bg-yellow-500 text-white px-4 py-2 rounded-md bg-gradient-to-r from-pink-500 to-yellow-500" onClick={() => closeModal()}>Close</button>
                     </div>
                 </div>
             </div>

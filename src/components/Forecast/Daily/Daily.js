@@ -56,41 +56,48 @@ const Daily = () => {
 
 
     return (
-        <div className='w-4/5 mx-auto'>
-            <div className='my-3'>
-                <h4 className='font-bold text-green-500 text-3xl text-center'>Next 7 Days Expected Weather</h4>
-            </div>
-            <div className='md:grid md:grid-cols-4 lg:grid-cols-6 gap-4'>
-                {forecastDaily?.map((it) => (
-                    <div key={it.dt} className='px-2 py-2 rounded-xl border'>
-                        <div>
-                            <img src={`http://openweathermap.org/img/wn/${it?.weather[0]?.icon}@2x.png`} alt="" />
-                        </div>
-                        <div className='text-center text-green-500 text-lg'>
-                            <p>{it?.main?.feels_like}</p>
-                        </div>
-                        <div>
-                            <p className='text-center'>{createDate(it.dt)}</p>
-                            {/* <p>time: {(new Date(it?.dt * 1000 - (forecast?.timezone_offset * 1000)))}</p> */}
-                        </div>
-                        <div className='flex justify-between'>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                                </svg><span>{it?.temp?.max}</span>
+        <div >
+            <div className='w-4/5 mx-auto'>
+                <br />
+                <br />
+                <div className='my-5'>
+                    <p className='text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-yellow-500 text-4xl my-4 font-bold text-center'>Next 7 Days Expected Weather</p>
+                </div>
+                <br /><br />
+                <div className='md:grid md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                    {forecastDaily?.map((it) => (
+                        <div key={it.dt} className='p-4 rounded-xl border'>
+                            <div className='flex justify-center'>
+
+                                <img className='' src={`http://openweathermap.org/img/wn/${it?.weather[0]?.icon}@2x.png`} alt="" />
+
+                            </div>
+                            <div className='text-center text-green-500 text-lg'>
+                                <p>{it?.main?.feels_like}</p>
                             </div>
                             <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                </svg><span>{it?.temp?.min}</span>
+                                <p className='text-center'>{createDate(it.dt)}</p>
+                                {/* <p>{it?.temp.main}</p> */}
+                                {/* <p>time: {(new Date(it?.dt * 1000 - (forecast?.timezone_offset * 1000)))}</p> */}
                             </div>
+                            <div className='flex justify-between text-sm mt-3'>
+                                <div>
+                                    <span>Day: {it?.temp?.day} &#8451;</span>
+                                </div>
+                                <div>
+                                    <span>Night: {it?.temp?.night} &#8451;</span>
+                                </div>
+                            </div>
+
+                            {/* modal */}
+                            <div className='text-center mt-3'>
+                                <Modal it={it}></Modal>
+
+                            </div>
+
                         </div>
-
-                        {/* modal */}
-                     <Modal it={it}></Modal>
-
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );

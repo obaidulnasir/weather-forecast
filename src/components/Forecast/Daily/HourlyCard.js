@@ -1,6 +1,5 @@
 import React from 'react';
 import useW from '../../../hooks/useW';
-import Chart from '../../Chart/Chart';
 
 const HourlyCard = () => {
     const { forecast } = useW();
@@ -19,15 +18,16 @@ const HourlyCard = () => {
     return (
         <div className='w-4/5 mx-auto'>
             {/* <Chart></Chart> */}
-            <div className='my-3'>
-                <h4 className='font-bold text-green-500 text-3xl text-center'>Next 12 Hour Expected Weather</h4>
+            <br /><br />
+            <div className='my-10'>
+                <h4 className='text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-yellow-500 text-4xl my-4 font-bold text-center'>Next 12 Hour Expected Weather</h4>
             </div>
             <div className='grid grid-cols-4 gap-4'>
                 {sliceList?.map((it) => (
                     <div key={it?.dt} className='px-2 py-2 shadow-md rounded-xl border'>
                         <div className='text-center'>
                             <p>{createTime(it?.dt)}:00</p>
-                            <div>
+                            <div className='flex justify-center'>
                                 <img className='d-block' src={`http://openweathermap.org/img/wn/${it?.weather[0]?.icon}@2x.png`} alt="" />
                             </div>
                         </div>

@@ -7,7 +7,7 @@ const SearchField = () => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        // console.log(data.city);
+        console.log(data.city);
         currentWeather(data.city)
         console.log(errors);
         reset();
@@ -22,7 +22,8 @@ const SearchField = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input className='py-2' type="text" placeholder="Enter Your CityName" {...register("city", {})} />
 
-                    <input className='bg-green-400 py-2 px-4' type="submit" value="Search" />
+                    <input className='bg-gradient-to-r from-green-500 to-yellow-500 py-2 px-4' type="submit" value="Search" />
+                    {/* "bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-md px-4 py-2 hover:from-pink-500 hover:to-yellow-500 transition" */}
                 </form>
             </div>
         </div>
