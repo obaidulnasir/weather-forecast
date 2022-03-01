@@ -17,7 +17,6 @@ const HourlyCard = () => {
     console.log(forecast);
     return (
         <div className='w-4/5 mx-auto'>
-            {/* <Chart></Chart> */}
             <br /><br />
             <div className='my-10'>
                 <h4 className='text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-yellow-500 text-4xl my-4 font-bold text-center'>Next 12 Hour Expected Weather</h4>
@@ -28,7 +27,7 @@ const HourlyCard = () => {
                         <div className='text-center'>
                             <p>{createTime(it?.dt)}:00</p>
                             <div className='flex justify-center'>
-                                <img className='d-block' src={`http://openweathermap.org/img/wn/${it?.weather[0]?.icon}@2x.png`} alt="" />
+                                <img className='d-block' src={`https://openweathermap.org/img/wn/${it?.weather[0]?.icon}@2x.png`} alt="" />
                             </div>
                         </div>
                         <div className='flex justify-between'>

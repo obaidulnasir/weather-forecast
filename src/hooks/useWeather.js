@@ -30,7 +30,7 @@ const useWeather = () => {
     // daily weather 
     const currentWeather = (cityName) => {
         setIsLoading(true);
-        fetch(`http://api.openweathermap.org/data/2.5/find?q=${cityName}&units=metric&appid=be50a25517c85b53aadc1715321af62f`)
+        fetch(`https://api.openweathermap.org/data/2.5/find?q=${cityName}&units=metric&appid=be50a25517c85b53aadc1715321af62f`)
             .then(res => res.json())
             .then(data => setCityWeather(data));
 
@@ -39,7 +39,7 @@ const useWeather = () => {
         const lon = cityWeather?.list[0]?.coord?.lon;
 
         if (cityWeather) {
-            fetch(`http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=74a8802d5091210cdbca89eb149584d6`)
+            fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=74a8802d5091210cdbca89eb149584d6`)
                 .then(res => res.json())
                 .then(data => setForecast(data));
             console.log(cityWeather);

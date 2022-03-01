@@ -69,7 +69,7 @@ const Daily = () => {
                         <div key={it.dt} className='p-4 rounded-xl border'>
                             <div className='flex justify-center'>
 
-                                <img className='' src={`http://openweathermap.org/img/wn/${it?.weather[0]?.icon}@2x.png`} alt="" />
+                                <img className='' src={`https://openweathermap.org/img/wn/${it?.weather[0]?.icon}@2x.png`} alt="" />
 
                             </div>
                             <div className='text-center text-green-500 text-lg'>
